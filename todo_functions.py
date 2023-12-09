@@ -1,6 +1,5 @@
 import csv
 
-
 def add_todo(file_name):
     print("Add todo")
     #Ask the title of the todo
@@ -27,7 +26,7 @@ def remove_todo(file_name):
                 todo_lists.append(row)
     with open(file_name, "w") as f:
         writer = csv.writer(f)
-        writer.writerow(todo_lists)
+        writer.writerows(todo_lists)
 
 def mark_todo(file_name):
     print("Mark todo")
